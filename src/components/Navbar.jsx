@@ -7,7 +7,8 @@ import competitionLogo from "../assets/competition-logo.png";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-  const isCompetitionPage = location.pathname.includes('competition');
+  const isFestivalPage = location.pathname.includes('festival');
+  const isCompetitionPage = !isFestivalPage; // Default to competition page
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -79,7 +80,9 @@ const Navbar = () => {
                   key={index}
                   href={item.href}
                   onClick={(e) => scrollToSection(e, item.href.slice(1))}
-                  className="text-white hover:bg-white hover:text-[#FF7F50] px-2 py-2 rounded-md text-sm font-[600] transition-all duration-300 ease-in-out whitespace-nowrap"
+                  className={`text-white hover:bg-white px-2 py-2 rounded-md text-sm font-[600] transition-all duration-300 ease-in-out whitespace-nowrap ${
+                    isCompetitionPage ? 'hover:text-[rgb(95,188,215)]' : 'hover:text-[#FF7F50]'
+                  }`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -93,7 +96,7 @@ const Navbar = () => {
               <Link
                 to="/festival"
                 onClick={() => window.scrollTo(0, 0)}
-                className="bg-white text-[#FF7F50] py-2 px-4 rounded-md hover:bg-opacity-90 transition-all duration-300 text-sm font-[700] shadow-md whitespace-nowrap"
+                className="bg-white text-[rgb(95,188,215)] py-2 px-4 rounded-md hover:bg-opacity-90 transition-all duration-300 text-sm font-[700] shadow-md whitespace-nowrap"
               >
                 Festival Mundial de la Guitarra
               </Link>

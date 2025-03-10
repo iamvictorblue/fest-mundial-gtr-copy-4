@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import WorldGuitarCompetitionPage from './components/WorldGuitarCompetitionPage';
 import FestivalPage from './components/FestivalPage';
 import Navbar from './components/Navbar';
@@ -10,7 +10,7 @@ function App() {
       <Navbar />
       <main className="flex-grow">
         <Routes>
-          <Route path="/" element={<FestivalPage />} />
+          <Route path="/" element={<Navigate to="/competition" replace />} />
           <Route path="/festival/*" element={<FestivalPage />} />
           <Route path="/competition/*" element={<WorldGuitarCompetitionPage />} />
         </Routes>
