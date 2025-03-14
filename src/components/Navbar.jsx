@@ -30,8 +30,8 @@ const Navbar = () => {
   };
 
   const festivalNavItems = [
-    { href: "#festival-2025", label: "Festival Mundial 2025" },
-    { href: "#calendario", label: "Descripción y Calendario De Eventos" },
+    { href: "#festival-2025", label: "Festival Mundial De La Guitarra 2025" },
+    { href: "#calendario", label: "Descripción y Calendario" },
     { href: "#simposio", label: "Simposio Internacional" },
     { href: "#conciertos", label: "Conciertos" },
     { href: "#concurso-nacional", label: "Concurso Nacional de Guitarra" },
@@ -47,7 +47,7 @@ const Navbar = () => {
     { href: "#final-stage", label: "Final" },
     { href: "#stipend", label: "Stipend" },
     { href: "#jury", label: "Jury" },
-    { href: "#jose-antonio-lopez", label: "José A. López" },
+    { href: "#jose-antonio-lopez", label: "About José Antonio López" },
   ];
 
   const navItems = isCompetitionPage ? competitionNavItems : festivalNavItems;
@@ -70,7 +70,7 @@ const Navbar = () => {
               onClick={(e) => scrollToSection(e, "hero")}
             />
           </div>
-          <div className="md:hidden text-white text-center font-[600] text-sm px-2">
+          <div className="md:hidden text-black text-center font-[600] text-sm px-2">
             {isCompetitionPage ? 'Jose Antonio López World Guitar Competition' : 'Festival Mundial de la Guitarra'}
           </div>
           <div className="hidden md:flex flex-1 items-center justify-center">
@@ -80,7 +80,7 @@ const Navbar = () => {
                   key={index}
                   href={item.href}
                   onClick={(e) => scrollToSection(e, item.href.slice(1))}
-                  className={`text-white hover:bg-white px-2 py-2 rounded-md text-sm font-[600] transition-all duration-300 ease-in-out whitespace-nowrap ${
+                  className={`${isCompetitionPage ? 'text-white' : 'text-black'} hover:bg-white px-2 py-2 rounded-md text-sm font-[600] transition-all duration-300 ease-in-out whitespace-nowrap ${
                     isCompetitionPage ? 'hover:text-[rgb(95,188,215)]' : 'hover:text-[#C0C0C0]'
                   }`}
                   whileHover={{ scale: 1.05 }}
@@ -149,7 +149,7 @@ const Navbar = () => {
               className={`block px-3 py-2 rounded-md text-base font-[500] ${
                 isCompetitionPage 
                   ? 'text-white hover:bg-white hover:text-[rgb(95,188,215)]' 
-                  : 'text-white hover:bg-white hover:text-[#C0C0C0]'
+                  : 'text-black hover:bg-white hover:text-[#C0C0C0]'
               } transition-all duration-200`}
               whileHover={{ x: 10 }}
             >
