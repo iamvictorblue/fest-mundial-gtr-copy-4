@@ -320,12 +320,12 @@ const FestivalPage = () => {
               </p>
               <div className="flex justify-center mb-6">
                 <a 
-                  href="https://forms.gle/pCvebo7i2hkoKzXM9" 
-                  target="_blank" 
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScgUjrhno28Sbpq8Tl1FcJuWlkZFeu3RrPvBPWTxJshpz1e0g/viewform?usp=sharing"
+                  target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-[#FF8C00] text-white py-3 px-6 rounded-full hover:bg-[#E67E00] transition-colors text-center font-[700] text-lg shadow-md hover:shadow-lg"
+                  className="inline-block bg-white text-[#666666] py-3 px-6 rounded-full hover:bg-gray-100 transition-colors text-center font-[700] text-lg shadow-md hover:shadow-lg"
                 >
-                  Formulario de Inscripción
+                  Registration Form
                 </a>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
