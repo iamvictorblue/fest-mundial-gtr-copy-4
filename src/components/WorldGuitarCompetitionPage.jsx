@@ -146,6 +146,39 @@ const WorldGuitarCompetitionPage = () => {
       </div>
 
       <div className="max-w-[85vw] mx-auto py-24 px-6 space-y-24 relative z-10">
+        {/* StrawPoll Section */}
+        <AnimateOnScroll animation={fadeInUp}>
+          <section 
+            id="strawpoll" 
+            className="mx-auto max-w-4xl backdrop-blur-xl px-8 py-10 rounded-2xl shadow-2xl section-padding relative overflow-hidden transform"
+            style={{
+              backgroundImage: `linear-gradient(135deg, rgba(56, 188, 212, 0.95), rgba(14, 149, 173, 0.95))`,
+            }}
+          >
+            <div className="flex flex-col items-center gap-0 mb-6 w-full">
+              <img src={festLogo} alt="Festival Logo" className="w-48 h-48 object-contain -mt-24 -mb-8" />
+              <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
+                font-['Inter'] tracking-[0.2em] leading-relaxed
+                [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
+                border-b-2 border-white/30 pb-2 uppercase w-full">Vote Now</h2>
+            </div>
+            <div className="strawpoll-embed" id="strawpoll_XOgOVrmxGn3" style={{ height: '644px', maxWidth: '640px', width: '100%', margin: '0 auto', display: 'flex', flexDirection: 'column' }}>
+              <iframe 
+                title="StrawPoll Embed" 
+                id="strawpoll_iframe_XOgOVrmxGn3" 
+                src="https://strawpoll.com/embed/XOgOVrmxGn3" 
+                style={{ position: 'static', visibility: 'visible', display: 'block', width: '100%', flexGrow: 1 }} 
+                frameBorder="0" 
+                allowFullScreen 
+                allowTransparency
+              >
+                Loading...
+              </iframe>
+              <script async src="https://cdn.strawpoll.com/dist/widgets.js" charSet="utf-8"></script>
+            </div>
+          </section>
+        </AnimateOnScroll>
+
         {/* Hero Section - Full width and centered */}
         <AnimateOnScroll animation={fadeInUp}>
           <div className="flex justify-center items-center w-full">
